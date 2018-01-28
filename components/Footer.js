@@ -1,14 +1,14 @@
 export default class extends React.Component {
   render() {
     return (
-      <header>
-        Header
+      <footer>
+        Footer
         <style jsx>{`
-          header {
-            grid-area: hd;
+          footer {
+            grid-area: ft;
           }
         `}</style>
-      </header>
+      </footer>
     )
   }
 }

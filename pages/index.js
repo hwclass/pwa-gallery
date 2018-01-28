@@ -3,6 +3,7 @@ import 'isomorphic-fetch'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
 import Gallery from '../components/Gallery'
+import Footer from '../components/Footer'
 
 export default class extends React.PureComponent {
   componentDidMount () {
@@ -25,6 +26,7 @@ export default class extends React.PureComponent {
         <main>
           <Gallery/>
         </main>
+        <Footer/>
       </Layout>
     )
   }
