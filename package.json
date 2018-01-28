@@ -1,0 +1,20 @@
+{
+  "name": "pwa-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build && NODE_ENV=production node server.js"
+  },
+  "author": "Baris Guler <harderworking.class@gmail.com> (https://www.github.com/hwclass)",
+  "license": "ISC",
+  "dependencies": {
+    "isomorphic-fetch": "2.2.1",
+    "next": "4.2.3",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "sw-precache-webpack-plugin": "0.11.4"
+  }
+}
