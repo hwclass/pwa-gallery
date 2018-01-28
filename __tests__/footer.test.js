@@ -4,19 +4,19 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Header from '../components/Header.js'
+import Footer from '../components/Footer.js'
 
 describe('With Enzyme', () => {
-  it('Header shows "Header"', () => {
-    const header = shallow(<Header />)
+  it('Footer shows "Footer"', () => {
+    const footer = shallow(<Footer />)
 
-    expect(header.text()).toEqual('Header<JSXStyle />')
+    expect(footer.text()).toEqual('Footer<JSXStyle />')
   })
 })
 
 describe('With Snapshot Testing', () => {
-  it('Header shows "Header"', () => {
-    const component = renderer.create(<Header />)
+  it('Footer shows "Footer"', () => {
+    const component = renderer.create(<Footer />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
