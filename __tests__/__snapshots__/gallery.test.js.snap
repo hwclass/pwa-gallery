@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing Gallery shows "Gallery" 1`] = `
+<div>
+  Gallery
+</div>
+`;

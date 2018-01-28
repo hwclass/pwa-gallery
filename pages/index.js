@@ -13,7 +13,6 @@ export default class extends React.PureComponent {
           console.log('service worker registration successful')
         })
         .catch(err => {
-          debugger
           console.warn('service worker registration failed', err.message)
         })
     }
