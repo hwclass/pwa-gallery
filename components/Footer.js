@@ -1,11 +1,11 @@
 export default class extends React.Component {
   render() {
     return (
-      <header>
-        Car Photos
+      <footer>
+        Footer
         <style jsx>{`
-          header {
-            grid-area: hd;
+          footer {
+            grid-area: ft;
             height: 50px;
             background: blue;
             color: #FFF;
@@ -13,7 +13,7 @@ export default class extends React.Component {
             line-height: 50px;
           }
         `}</style>
-      </header>
+      </footer>
     );
   }
 }
