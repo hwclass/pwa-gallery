@@ -9,6 +9,9 @@ import Modal from '../components/Modal';
 
 export default class extends React.Component {
   static async getInitialProps() {
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1000)
+    })
     if (!process.browser) {
       const res = await axios.get('https://www.mobile.de/hiring-challenge.json');
       return { data: res.data };
