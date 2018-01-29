@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "NODE_ENV=dev && next",
     "start": "next start",
     "build": "next build && NODE_ENV=production node server.js",
     "test": "NODE_ENV=test jest"
@@ -13,9 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "0.17.1",
+    "babel-plugin-inline-dotenv": "1.1.2",
+    "babel-plugin-transform-inline-environment-variables": "0.2.0",
     "isomorphic-fetch": "2.2.1",
     "micro": "9.1.0",
     "next": "4.2.3",
+    "nprogress": "0.2.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "sw-precache-webpack-plugin": "0.11.4",
