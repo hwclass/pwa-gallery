@@ -5,12 +5,12 @@ import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import Modal from '../components/Modal';
 
-import { IMAGES_URL } from '../constants/images'
+// import { IMAGES_URL } from '../constants/images'
 
 export default class extends React.Component {
   static async getInitialProps() {
     if (!process.browser) {
-      const res = await axios.get(process.env.IMAGES_URL);
+      const res = await axios.get('https://www.mobile.de/hiring-challenge.json');
       return { data: res.data };
     } else {
       const data = JSON.parse(sessionStorage.getItem('data'));

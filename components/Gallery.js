@@ -4,7 +4,7 @@ import uuid from 'uuid'
 import Layout from './Layout';
 import Image from './Image';
 
-import { TITLE } from '../constants/app'
+// import { TITLE } from '../constants/app'
 
 export default class extends React.Component {
   showPhoto(e, uri) {
@@ -15,7 +15,7 @@ export default class extends React.Component {
   render() {
     const { images } = this.props;
     return (
-      <Layout title={TITLE}>
+      <Layout title="PWA Gallery">
         <div>
           {images.map((image) =>
               <a
