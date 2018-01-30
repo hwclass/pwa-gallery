@@ -13,7 +13,7 @@ export default class extends React.Component {
   render() {
     const { images, title } = this.props;
     return (
-      <Layout title="PWA Gallery" headerText="Car Photos">
+      <Layout title={process.env.TITLE} headerText={process.env.HEADER_TEXT}>
         <div className="gallery">
           {images.map((image) =>
             <a

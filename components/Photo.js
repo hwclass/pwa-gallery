@@ -4,7 +4,7 @@ export default class extends React.Component {
   render() {
     const { id, uri, title } = this.props
     return (
-      <Layout title={`PWA Gallery - ${title}`} headerText="Photo">
+      <Layout title={`${process.env.TITLE} - ${title}`} headerText={`${process.env.PHOTO_TITLE}`}>
         <article>
           <span className="title">
             {title}
@@ -30,14 +30,6 @@ export default class extends React.Component {
             `}</style>
           </span>
           <picture key={id} className="pic">
-            {/*<source
-              media="(min-width: 36em)"
-              srcSet={`http://${uri}_27.jpg 1024w, http://${uri}_27.jpg 640w, http://${uri}$_27.jpg 320w`}
-              sizes="33.3vw"
-            />
-            <source
-              srcSet={`http://${uri}_27.jpg 2x, http://${uri}_2.jpg 1x`}
-            />*/}
             <img src={`http://${uri}_27.jpg`} />
             <style jsx>{`
               .pic {
