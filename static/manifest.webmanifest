@@ -1,0 +1,14 @@
+{
+  "name": "PWA Gallery",
+  "short_name": "PWA Gallery",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "A simple image gallery based on Progressive Web Application paradigm",
+  "icons": [{
+    "src": "/static/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
