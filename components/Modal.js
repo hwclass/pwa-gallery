@@ -12,7 +12,7 @@ export default class extends React.Component {
           <a href="#" className="closeIcon"/>
         </span>
         <picture key={id} className="pic">
-          <img src={`http://${uri}_27.jpg`} />
+          <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`} />
         </picture>
         <style jsx>{`
           .frame {

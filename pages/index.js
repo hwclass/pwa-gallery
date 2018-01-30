@@ -13,7 +13,7 @@ export default class extends React.Component {
 
   static async getInitialProps() {
     if (!process.browser) {
-      const res = await axios.get('https://www.mobile.de/hiring-challenge.json');
+      const res = await axios.get(process.env.IMAGES_URL);
       return { data: res.data };
     } else {
       const data = JSON.parse(sessionStorage.getItem('data'));
