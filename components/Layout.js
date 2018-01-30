@@ -1,7 +1,6 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header'
 
 export default class extends React.Component {
   render() {
@@ -10,6 +9,7 @@ export default class extends React.Component {
         <Head>
           <title>{this.props.title}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <link rel="manifest" href="/static/manifest.webmanifest" />
           <meta name="theme-color" content="#ff6600" />
           <link rel="apple-touch-icon" href="/static/icon.png" />
           <meta name="apple-mobile-web-app-title" content="PWA Gallery" />
