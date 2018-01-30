@@ -17,9 +17,8 @@ export default class extends React.Component {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
         </Head>
-        <Header />
+        <Header text={this.props.headerText}/>
         {this.props.children}
-        <Footer />
         <style jsx global>{`
           body {
             background: #fff;
@@ -32,7 +31,7 @@ export default class extends React.Component {
         <style jsx>{`
           display: grid;
           grid-template-columns: repeat(1, 1fr);
-          grid-auto-rows: minmax(100px, auto);
+          grid-auto-rows: minmax(50px, auto);
           grid-template-areas:
             'hd'
             'main'

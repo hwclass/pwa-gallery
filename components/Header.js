@@ -2,7 +2,7 @@ export default class extends React.Component {
   render() {
     return (
       <header>
-        Car Photos
+        {this.props.text}
         <style jsx>{`
           header {
             grid-area: hd;
