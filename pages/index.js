@@ -1,14 +1,22 @@
 import Router from 'next/router'
+import dynamic from 'next/dynamic'
 import axios from 'axios';
 
 import Layout from '../components/Layout';
 import Gallery from '../components/Gallery';
 import Modal from '../components/Modal';
 
-// import { IMAGES_URL } from '../constants/images'
+const GalleryWithDynamicLoading = dynamic(
+  import('../components/Gallery'), {
+    loading: () => <p>The Gallery is loading...</p>
+  }
+)
 
 export default class extends React.Component {
   static async getInitialProps() {
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1000)
+    })
     if (!process.browser) {
       const res = await axios.get('https://www.mobile.de/hiring-challenge.json');
       return { data: res.data };
@@ -44,9 +52,9 @@ export default class extends React.Component {
       <main>
         {
           url.query.photoUri &&
-          <Modal uri={url.query.photoUri} onClose={() => this.closeModal()}/>
+          <Modal uri={url.query.photoUri} title={data.title} onClose={() => this.closeModal()}/>
         }
-        <Gallery images={data.images} />
+        <GalleryWithDynamicLoading images={data.images} title={data.title}/>
         <style jsx>{`
           header {
             grid-area: main;
