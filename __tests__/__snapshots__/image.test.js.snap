@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should match with snapshot 1`] = `
+<article>
+  <picture
+    className="jsx-3329984789 pic"
+  >
+    <source
+      className="jsx-3329984789"
+      media="(min-width: 36em)"
+      sizes="33.3vw"
+      srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg$_27.jpg 320w"
+    />
+    <source
+      className="jsx-3329984789"
+      srcSet="http:///some-url/for-image-1.jpg_27.jpg 2x, http:///some-url/for-image-1.jpg_2.jpg 1x"
+    />
+    <img
+      className="jsx-3329984789"
+      src="http:///some-url/for-image-1.jpg_27.jpg"
+    />
+  </picture>
+  <span
+    className="jsx-2158314212 title"
+  >
+    Image Title
+  </span>
+</article>
+`;
+
+exports[`Image should render 1`] = `
+Array [
+  <article>
+    <picture
+      className="jsx-3329984789 pic"
+    >
+      <source
+        className="jsx-3329984789"
+        media="(min-width: 36em)"
+        sizes="33.3vw"
+        srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg$_27.jpg 320w"
+      />
+      <source
+        className="jsx-3329984789"
+        srcSet="http:///some-url/for-image-1.jpg_27.jpg 2x, http:///some-url/for-image-1.jpg_2.jpg 1x"
+      />
+      <img
+        className="jsx-3329984789"
+        src="http:///some-url/for-image-1.jpg_27.jpg"
+      />
+      <JSXStyle
+        css=".pic.jsx-3329984789{background:#FFF;}img.jsx-3329984789,src.jsx-3329984789{margin:0 auto;display:block;}"
+        styleId="3329984789"
+      />
+    </picture>
+    <span
+      className="jsx-2158314212 title"
+    >
+      Image Title
+      <JSXStyle
+        css=".title.jsx-2158314212{display:block;text-align:center;font-size:2.5vmin;}@media screen and (max-width:400px){.title.jsx-2158314212{display:none;}}"
+        styleId="2158314212"
+      />
+    </span>
+  </article>,
+]
+`;

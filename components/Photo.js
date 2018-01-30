@@ -1,8 +1,3 @@
-// import {
-//   IMAGE_SMALL_SIZE_PREFIX,
-//   IMAGE_LARGE_SIZE_PREFIX
-// } from '../constants/images'
-
 import Layout from './Layout';
 
 export default class extends React.Component {

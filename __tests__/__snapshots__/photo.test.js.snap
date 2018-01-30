@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Photo should match with snapshot 1`] = `
+<div
+  className="jsx-3488773145"
+>
+  <header
+    className="jsx-1922746274"
+  >
+    Photo
+  </header>
+  <article>
+    <span
+      className="jsx-588413163 title"
+    >
+      Photo Title
+      <a
+        className="jsx-588413163 closeIcon"
+        href="#"
+      />
+    </span>
+    <picture
+      className="jsx-2627651806 pic"
+    >
+      <img
+        className="jsx-2627651806"
+        src="http:///some-url/for-image-1.jpg_27.jpg"
+      />
+    </picture>
+  </article>
+</div>
+`;
+
+exports[`Photo should render 1`] = `
+Array [
+  <_class
+    headerText="Photo"
+    title="PWA Gallery - Photo Title"
+  >
+    <article>
+      <span
+        className="jsx-588413163 title"
+      >
+        Photo Title
+        <a
+          className="jsx-588413163 closeIcon"
+          href="#"
+        />
+        <JSXStyle
+          css=".title.jsx-588413163{display:block;max-width:100%;padding:15px;text-align:center;font-size:2.5vmin;background:#000;color:#FFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}@media screen and (max-width:400px){.title.jsx-588413163{font-size:2.5vmax;}}"
+          styleId="588413163"
+        />
+      </span>
+      <picture
+        className="jsx-2627651806 pic"
+      >
+        <img
+          className="jsx-2627651806"
+          src="http:///some-url/for-image-1.jpg_27.jpg"
+        />
+        <JSXStyle
+          css=".pic.jsx-2627651806{background:#FFF;}img.jsx-2627651806{display:block;margin:auto;width:100%;}@media screen and (max-width:400px){img.jsx-2627651806{width:100%;}}"
+          styleId="2627651806"
+        />
+      </picture>
+    </article>
+  </_class>,
+]
+`;

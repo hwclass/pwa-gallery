@@ -12,14 +12,6 @@ export default class extends React.Component {
           <a href="#" className="closeIcon"/>
         </span>
         <picture key={id} className="pic">
-          {/*<source
-            media="(min-width: 36em)"
-            srcSet={`http://${uri}_27.jpg 1024w, http://${uri}_27.jpg 640w, http://${uri}$_27.jpg 320w`}
-            sizes="33.3vw"
-          />
-          <source
-            srcSet={`http://${uri}_27.jpg 2x, http://${uri}_27.jpg 1x`}
-          />*/}
           <img src={`http://${uri}_27.jpg`} />
         </picture>
         <style jsx>{`

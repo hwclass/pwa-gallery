@@ -4,19 +4,18 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Header from '../components/Header.js'
+import Header from '../components/Header'
 
-describe('With Enzyme', () => {
-  it('Header shows "Header"', () => {
-    const header = shallow(<Header />)
-
-    expect(header.text()).toEqual('Header<JSXStyle />')
+describe('Header', () => {
+  it('should render', () => {
+    const header = shallow(<Header text={"Car Photos"}/>)
+    expect(header.text()).toEqual('Car Photos<JSXStyle />')
   })
 })
 
-describe('With Snapshot Testing', () => {
-  it('Header shows "Header"', () => {
-    const component = renderer.create(<Header />)
+describe('Header', () => {
+  it('should match with snapshot', () => {
+    const component = renderer.create(<Header text={"Car Photos"}/>)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })

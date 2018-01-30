@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should match with snapshot 1`] = `
+<div
+  className="jsx-3488773145"
+>
+  <header
+    className="jsx-1922746274"
+  >
+    Header Text
+  </header>
+</div>
+`;
+
+exports[`Layout should render 1`] = `
+Array [
+  <div
+    className="jsx-3488773145"
+  >
+    <SideEffect(Head)>
+      <title
+        className="jsx-3488773145"
+      >
+        Title
+      </title>
+      <meta
+        className="jsx-3488773145"
+        content="width=device-width, initial-scale=1.0"
+        name="viewport"
+      />
+      <link
+        className="jsx-3488773145"
+        href="/static/manifest.webmanifest"
+        rel="manifest"
+      />
+      <meta
+        className="jsx-3488773145"
+        content="#ff6600"
+        name="theme-color"
+      />
+      <link
+        className="jsx-3488773145"
+        href="/static/icon.png"
+        rel="apple-touch-icon"
+      />
+      <meta
+        className="jsx-3488773145"
+        content="PWA Gallery"
+        name="apple-mobile-web-app-title"
+      />
+      <meta
+        className="jsx-3488773145"
+        content="default"
+        name="apple-mobile-web-app-status-bar-style"
+      />
+      <meta
+        className="jsx-3488773145"
+        content="yes"
+        name="apple-mobile-web-app-capable"
+      />
+      <meta
+        className="jsx-3488773145"
+        content="yes"
+        name="mobile-web-app-capable"
+      />
+    </SideEffect(Head)>
+    <_class
+      text="Header Text"
+    />
+    <JSXStyle
+      css="body{background:#fff;font:11px Helvetica;font-size:18px;padding:0;margin:0;}"
+      styleId="2456803378"
+    />
+    <JSXStyle
+      css=".jsx-3488773145{display:grid;grid-template-columns:repeat(1,1fr);grid-auto-rows:minmax(50px,auto);grid-template-areas: 'hd' 'main' 'ft';}"
+      styleId="3091863714"
+    />
+  </div>,
+]
+`;

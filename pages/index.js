@@ -1,28 +1,38 @@
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
-import axios from 'axios';
+import axios from 'axios'
 
-import Layout from '../components/Layout';
-import Gallery from '../components/Gallery';
-import Modal from '../components/Modal';
-
-const GalleryWithDynamicLoading = dynamic(
-  import('../components/Gallery'), {
-    loading: () => <p>The Gallery is loading...</p>
-  }
-)
+import Gallery from '../components/Gallery'
+import Modal from '../components/Modal'
 
 export default class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.onKeyDown = this.onKeyDown.bind(this)
+  }
+
   static async getInitialProps() {
-    await new Promise((resolve) => {
-      setTimeout(resolve, 1000)
-    })
     if (!process.browser) {
       const res = await axios.get('https://www.mobile.de/hiring-challenge.json');
       return { data: res.data };
     } else {
       const data = JSON.parse(sessionStorage.getItem('data'));
       return { data };
+    }
+  }
+
+  componentDidMount () {
+    document.addEventListener('keydown', this.onKeyDown)
+  }
+
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.onKeyDown)
+  }
+
+  onKeyDown (e) {
+    if (!this.props.url.query.photoId) return
+    if (e.keyCode === 27) {
+      this.props.url.back()
     }
   }
 
@@ -49,12 +59,12 @@ export default class extends React.Component {
   render() {
     const { url, data } = this.props;
     return (
-      <main>
+      <main className='content'>
         {
           url.query.photoUri &&
           <Modal uri={url.query.photoUri} title={data.title} onClose={() => this.closeModal()}/>
         }
-        <GalleryWithDynamicLoading images={data.images} title={data.title}/>
+        <Gallery images={data.images} title={data.title}/>
         <style jsx>{`
           header {
             grid-area: main;

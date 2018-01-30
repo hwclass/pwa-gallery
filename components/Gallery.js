@@ -4,8 +4,6 @@ import uuid from 'uuid'
 import Layout from './Layout';
 import Image from './Image';
 
-// import { TITLE } from '../constants/app'
-
 export default class extends React.Component {
   showPhoto(e, uri, title) {
     e.preventDefault()
@@ -18,16 +16,15 @@ export default class extends React.Component {
       <Layout title="PWA Gallery" headerText="Car Photos">
         <div className="gallery">
           {images.map((image) =>
-              <a
-                key={uuid.v4()}
-                className='photoLink'
-                href={`/photo?id=${image.uri}`}
-                onClick={(e) => this.showPhoto(e, image.uri, title)}
-              >
-                <Image id={uuid.v4()} key={uuid.v4()} uri={image.uri} title={title}/>
-              </a>
-            )
-          }
+            <a
+              key={uuid.v4()}
+              className='photoLink'
+              href={`/photo?id=${image.uri}`}
+              onClick={(e) => this.showPhoto(e, image.uri, title)}
+            >
+              <Image id={uuid.v4()} key={uuid.v4()} uri={image.uri} title={title}/>
+            </a>
+          )}
           <style jsx>{`
             .gallery {
               display: flex;

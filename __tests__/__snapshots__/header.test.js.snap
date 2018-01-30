@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`With Snapshot Testing Header shows "Header" 1`] = `
-<header>
-  Header
+exports[`Header should match with snapshot 1`] = `
+<header
+  className="jsx-1922746274"
+>
+  Car Photos
 </header>
 `;
