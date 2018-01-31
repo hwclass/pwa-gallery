@@ -1,3 +1,4 @@
+import React from 'react'
 import Layout from './Layout';
 
 export default class extends React.Component {
@@ -8,7 +9,6 @@ export default class extends React.Component {
         <article>
           <span className="title">
             {title}
-            <a href="#" className="closeIcon"/>
             <style jsx>{`
               .title {
                 display: block;
@@ -30,7 +30,7 @@ export default class extends React.Component {
             `}</style>
           </span>
           <picture key={id} className="pic">
-            <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`} />
+            <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`}/>
             <style jsx>{`
               .pic {
                 background: #FFF;

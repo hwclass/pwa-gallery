@@ -12,12 +12,7 @@ exports[`Photo page should match with snapshot 1`] = `
   <article>
     <span
       className="jsx-588413163 title"
-    >
-      <a
-        className="jsx-588413163 closeIcon"
-        href="#"
-      />
-    </span>
+    />
     <picture
       className="jsx-2627651806 pic"
     >
@@ -33,7 +28,7 @@ exports[`Photo page should match with snapshot 1`] = `
 exports[`Photo page should render 1`] = `
 Array [
   <_class
-    id="d600bffc-7170-43d4-aa59-67351db36dc0"
+    id="8412340b-4fba-4968-b6f7-aeacd52b7756"
     title={undefined}
     uri="photo-uri"
   />,

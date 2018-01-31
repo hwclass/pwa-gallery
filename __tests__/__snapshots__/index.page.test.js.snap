@@ -5,23 +5,23 @@ exports[`Index page should match with snapshot 1`] = `
   className="jsx-3097182411 content"
 >
   <div
-    className="jsx-783470322 frame"
+    className="jsx-475590090 frame"
     onClick={[Function]}
+    role="presentation"
   >
     <span
-      className="jsx-783470322 title"
+      className="jsx-475590090 title"
     >
       App Title
-      <a
-        className="jsx-783470322 closeIcon"
-        href="#"
+      <button
+        className="jsx-475590090 closeIcon"
       />
     </span>
     <picture
-      className="jsx-783470322 pic"
+      className="jsx-475590090 pic"
     >
       <img
-        className="jsx-783470322"
+        className="jsx-475590090"
         src="http://photo-uri_27.jpg"
       />
     </picture>

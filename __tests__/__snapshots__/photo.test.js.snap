@@ -14,10 +14,6 @@ exports[`Photo should match with snapshot 1`] = `
       className="jsx-588413163 title"
     >
       Photo Title
-      <a
-        className="jsx-588413163 closeIcon"
-        href="#"
-      />
     </span>
     <picture
       className="jsx-2627651806 pic"
@@ -42,10 +38,6 @@ Array [
         className="jsx-588413163 title"
       >
         Photo Title
-        <a
-          className="jsx-588413163 closeIcon"
-          href="#"
-        />
         <JSXStyle
           css=".title.jsx-588413163{display:block;max-width:100%;padding:15px;text-align:center;font-size:2.5vmin;background:#000;color:#FFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}@media screen and (max-width:400px){.title.jsx-588413163{font-size:2.5vmax;}}"
           styleId="588413163"

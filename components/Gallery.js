@@ -1,3 +1,4 @@
+import React from 'react'
 import Router from 'next/router'
 import uuid from 'uuid'
 
@@ -5,7 +6,7 @@ import Layout from './Layout';
 import Image from './Image';
 
 export default class extends React.Component {
-  showPhoto(e, uri, title) {
+  static showPhoto(e, uri, title) {
     e.preventDefault()
     Router.push(`/?photoUri=${uri}`, `/photo?uri=${uri}&title=${title}`)
   }
@@ -20,7 +21,7 @@ export default class extends React.Component {
               key={uuid.v4()}
               className='photoLink'
               href={`/photo?id=${image.uri}`}
-              onClick={(e) => this.showPhoto(e, image.uri, title)}
+              onClick={(e) => this.constructor.showPhoto(e, image.uri, title)}
             >
               <Image id={uuid.v4()} key={uuid.v4()} uri={image.uri} title={title}/>
             </a>

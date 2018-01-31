@@ -1,18 +1,20 @@
+import * as React from 'react'
+
 export default class extends React.Component {
-  onClose(e) {
+  onClose() {
     this.props.onClose()
   }
 
   render() {
     const { id, uri, title } = this.props
     return (
-      <div className='frame' onClick={(e) => this.onClose(e)}>
+      <div className='frame' onClick={(e) => this.onClose(e)} role='presentation'>
         <span className="title">
           {title}
-          <a href="#" className="closeIcon"/>
+          <button className="closeIcon"/>
         </span>
         <picture key={id} className="pic">
-          <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`} />
+          <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`}/>
         </picture>
         <style jsx>{`
           .frame {
@@ -48,6 +50,9 @@ export default class extends React.Component {
             width: 22px;
             height: 22px;
             opacity: 1;
+            background: transparent;
+            border: none;
+            cursor: pointer;
           }
           @media screen and (max-width: 400px) {
             .closeIcon {
