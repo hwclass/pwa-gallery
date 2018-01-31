@@ -70,6 +70,16 @@ If you are having problems generating actual snapshots, just clean your babel ca
 npm test -u
 ```
 
+## Running the Webpack analyzer
+
+If you are curious about what kind of dependencies we are using in the application, just run the following command:
+
+```
+npm run analyze
+```
+
+After then, this will open a new browser window for you showing the all details visually.
+
 ## Deployment
 
 Upon request, the best platform such an app is [now](https://zeit.co/now).
