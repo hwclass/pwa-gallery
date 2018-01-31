@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Photo page should match with snapshot 1`] = `
+<div
+  className="jsx-3488773145"
+>
+  <header
+    className="jsx-1922746274"
+  >
+    Photo
+  </header>
+  <article>
+    <span
+      className="jsx-588413163 title"
+    >
+      <a
+        className="jsx-588413163 closeIcon"
+        href="#"
+      />
+    </span>
+    <picture
+      className="jsx-2627651806 pic"
+    >
+      <img
+        className="jsx-2627651806"
+        src="http://photo-uri_27.jpg"
+      />
+    </picture>
+  </article>
+</div>
+`;
+
+exports[`Photo page should render 1`] = `
+Array [
+  <_class
+    id="d600bffc-7170-43d4-aa59-67351db36dc0"
+    title={undefined}
+    uri="photo-uri"
+  />,
+]
+`;

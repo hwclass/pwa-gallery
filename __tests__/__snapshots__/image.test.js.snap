@@ -9,7 +9,7 @@ exports[`Image should match with snapshot 1`] = `
       className="jsx-3329984789"
       media="(min-width: 36em)"
       sizes="33.3vw"
-      srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg$_27.jpg 320w"
+      srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg_27.jpg 320w"
     />
     <source
       className="jsx-3329984789"
@@ -38,7 +38,7 @@ Array [
         className="jsx-3329984789"
         media="(min-width: 36em)"
         sizes="33.3vw"
-        srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg$_27.jpg 320w"
+        srcSet="http:///some-url/for-image-1.jpg_27.jpg 1024w, http:///some-url/for-image-1.jpg_27.jpg 640w, http:///some-url/for-image-1.jpg_27.jpg 320w"
       />
       <source
         className="jsx-3329984789"

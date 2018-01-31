@@ -21,12 +21,8 @@ export default class extends React.Component {
     }
   }
 
-  componentDidMount () {
-    document.addEventListener('keydown', this.onKeyDown)
-  }
-
-  componentWillUnmount () {
-    document.removeEventListener('keydown', this.onKeyDown)
+  closeModal() {
+    Router.push('/')
   }
 
   onKeyDown (e) {
@@ -34,6 +30,14 @@ export default class extends React.Component {
     if (e.keyCode === 27) {
       this.props.url.back()
     }
+  }
+
+  componentDidMount () {
+    document.addEventListener('keydown', this.onKeyDown)
+  }
+
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.onKeyDown)
   }
 
   componentDidMount() {
@@ -50,10 +54,6 @@ export default class extends React.Component {
 
     if (!sessionStorage.getItem('data'))
       sessionStorage.setItem('data', JSON.stringify(this.props.data));
-  }
-
-  closeModal() {
-    Router.push('/')
   }
 
   render() {
