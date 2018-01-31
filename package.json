@@ -1,7 +1,7 @@
 {
   "name": "pwa-gallery",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application with SSR and offline support based on PWA approach",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=dev && node server.js",
