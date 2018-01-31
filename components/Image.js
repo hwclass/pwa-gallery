@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default class extends React.Component {
   render() {
     const { id, uri, title } = this.props
@@ -12,7 +14,7 @@ export default class extends React.Component {
           <source
             srcSet={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg 2x, http://${uri}${process.env.IMAGE_SMALL_SIZE_SUFFIX}.jpg 1x`}
           />
-          <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`} />
+          <img src={`http://${uri}${process.env.IMAGE_LARGE_SIZE_SUFFIX}.jpg`}/>
           <style jsx>{`
             .pic {
               background: #FFF;
