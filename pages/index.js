@@ -36,7 +36,9 @@ export default class extends React.Component {
         .register('/service-worker.js')
         .then()
         .catch(err => {
+          /* eslint no-console: 0 */
           console.warn('Service worker registration failed', err.message);
+          /* eslint no-console: 1 */
         });
       /* eslint no-unused-vars: 1 */
     }
