@@ -109,17 +109,23 @@ Upon request, the best platform such an app is [now](https://zeit.co/now).
 - [x] Layout should be responsive, from mobile to desktop
 - [x] Your application should fetch the data from the URL shared above
 
+![Imgur](https://i.imgur.com/39I1UQh.png)
+
 ## Webapp specs
 
 - [x] The first page should render image thumbnails of a car
 - [x] The second page should render larger images when the user clicks a thumbnail
 
-## Additional Featurs as Use Cases
+![Imgur](https://i.imgur.com/shYaf4R.png)
+
+## Additional Features as Use Cases
 - [x] Isomorphic/Universal rendering of the UI
 Beside that the gallery page (/) is server-side rendered, users can see the pictures own pages (/photo?...) as server-side rendered and the URL can be shared across.
 
 - [x] Progressive web application architecture
 Users can add the application into their home on their mobile devices. Since we are caching the first page (the gallery page) of the application, they will be still using the app partially. Additionally, we are using Service Workers and Web Manifest to enable this feature.
+
+![Imgur](https://i.imgur.com/1z09b3H.png)
 
 - [x] Responsive images with HTML5 srcset (of IMG tag)
 In every component, we are using ```srcset``` [attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) for responsive images.
@@ -127,6 +133,9 @@ In every component, we are using ```srcset``` [attribute](https://developer.mozi
 - [x] Constants management by environment variables
 - [x] Javascript linting with ESLint (with Airbnb preset)
 - [x] Webpack visual bundle analyzing
+
+![Imgur](https://i.imgur.com/rvCdo1b.png)
+
 - [x] Code beautifying with Prettier
 
 ## Nice to Have(s)
