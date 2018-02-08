@@ -38,8 +38,7 @@ module.exports = {
     }
 
     const rules = [].concat(eslintRule, config.module.rules);
-    return assocPath(['module', 'rules'], rules, config);
 
-    return config
+    return assocPath(['module', 'rules'], rules, config);
   }
 }

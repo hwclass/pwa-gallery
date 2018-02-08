@@ -2,12 +2,33 @@
 
 import * as React from 'react'
 import Router from 'next/router'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { namespaceConfig } from 'fast-redux'
 import axios from 'axios'
+
+import { activateState } from '../redux'
 
 import Gallery from '../components/Gallery'
 import Modal from '../components/Modal'
 
-export default class extends React.Component {
+const DEFAULT_STATE = {
+  build: 1
+}
+
+const { 
+  action,
+  getState: getIndexPageState
+} = namespaceConfig('indexPage', DEFAULT_STATE)
+
+const bumpBuild = action('bumpBuild',
+  (state, increment) => ({
+    ...state,
+    build: state.build + increment
+  })
+)
+
+class Index extends React.Component {
   static async getInitialProps() {
     if (!process.browser) {
       const res = await axios.get(process.env.IMAGES_URL);
@@ -36,9 +57,8 @@ export default class extends React.Component {
         .register('/service-worker.js')
         .then()
         .catch(err => {
-          /* eslint no-console: 0 */
-          console.warn('Service worker registration failed', err.message);
-          /* eslint no-console: 1 */
+          // eslint-disable-next-line
+          console.log('Service worker registration failed', err.message);
         });
       /* eslint no-unused-vars: 1 */
     }
@@ -59,7 +79,7 @@ export default class extends React.Component {
   }
 
   render() {
-    const { url, data } = this.props;
+    const { url, data, build, bumpBuild } = this.props;
     return (
       <main className='content'>
         {
@@ -67,6 +87,8 @@ export default class extends React.Component {
           <Modal uri={url.query.photoUri} title={data.title} onClose={() => this.constructor.closeModal()}/>
         }
         <Gallery images={data.images} title={data.title}/>
+        <button onClick={() => bumpBuild(1)}>Bump Build</button>
+        <div>{ build }</div>
         <style jsx>{`
           header {
             grid-area: main;
@@ -76,3 +98,13 @@ export default class extends React.Component {
     );
   }
 }
+
+function mapStateToProps (state) {
+  return getIndexPageState(state)
+}
+
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({ bumpBuild }, dispatch)
+}
+
+export default activateState(connect(mapStateToProps, mapDispatchToProps)(Index))

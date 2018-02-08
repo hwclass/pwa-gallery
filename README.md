@@ -99,6 +99,8 @@ Upon request, the best platform such an app is [now](https://zeit.co/now).
 * [Next](https://zeit.co/blog/next) - The web framework based on Node.js with SSR support
 * [React](https://reactjs.org/) - The view library for managing client-side flow
 * [styled-jsx](https://github.com/zeit/styled-jsx) - Styles for JSX without compremises
+* [Flexbox](https://developer.mozilla.org/en-US/docs/Glossary/Flexbox) - A layout model for UI design
+* [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) - The new approach for using grids natively
 * [Jest](https://facebook.github.io/jest/) - The testing framework supporting snapshot tests
 
 ## Constraints
